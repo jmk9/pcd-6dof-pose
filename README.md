@@ -1,6 +1,6 @@
 # pcd-6dof-pose
 
-Point cloud based 6-DoF pose estimation package for ROS.
+Point cloud based zero-shot 6-DoF pose estimation package for ROS.
 
 This package consumes point clouds filtered by an external detector and estimates the 6-DoF pose of a target object (e.g., drogue) using clustering and PCA / weighted PCA.
 
@@ -12,7 +12,7 @@ This package consumes point clouds filtered by an external detector and estimate
 
 ## Dependencies
 
-- ROS 1 (e.g. Noetic)
+- ROS Noetic
 - catkin workspace
 - Runtime dependencies (see `package.xml` for full list):
 	- `rospy`, `sensor_msgs`, `geometry_msgs`, `std_msgs`, `vision_msgs`, `message_filters`
