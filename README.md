@@ -1,4 +1,4 @@
-# pcd-6dof-pose
+# 6dof-pose-estimation-pcd
 
 Point cloud based zero-shot 6-DoF pose estimation package for ROS.
 
