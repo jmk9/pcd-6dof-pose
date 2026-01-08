@@ -34,9 +34,9 @@ source devel/setup.bash
 
 This package is **not** intended to run in isolation. It assumes that:
 
-- An RGB-D camera node is running and publishing depth / point cloud data.
-- A 2D object detector (e.g., YOLO-based) is running and providing detections.
-- Some external component fuses detections with the depth data and outputs a point cloud that mainly contains the target object.
+- An RGB-D camera node is running and publishing depth / point cloud data (e.g., `sensor_msgs/PointCloud2` on a `/camera/.../points` topic).
+- A 2D object detector (e.g., YOLO-based) is running and providing detections (e.g., `detection_msgs/BoundingBoxes` on `/yolo_world/detections`).
+- Some external component fuses detections with the depth data and outputs a point cloud that mainly contains the target object (by default this package expects a filtered `sensor_msgs/PointCloud2` on `/detection/lidar_detector/yolo_objects_pointcloud`, which can be remapped).
 
 In your own system, once such a filtered point cloud is available, you can integrate this package by launching its nodes (e.g., via `pcd_6dof.launch`) and wiring the input/output topics to match your existing stack.
 
