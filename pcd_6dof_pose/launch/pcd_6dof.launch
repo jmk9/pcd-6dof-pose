@@ -1,0 +1,3 @@
+<launch>
+  <node pkg="pcd_6dof_pose" type="pose_estimator_node.py" name="pose_estimator" output="screen" />
+</launch>
